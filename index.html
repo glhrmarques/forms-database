@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Taiff</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'primary-green': '#00915c',
+            'gray-dark': '#393939',
+            'gray-text': '#656565',
+            'gray-label': '#434343',
+            'gray-bg': '#f6f6f6',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-inter">
+  <div class="bg-white flex gap-4 items-stretch p-8 min-h-screen max-w-[1440px] mx-auto">
+    <!-- Left Image Section -->
+    <div class="flex-1 min-h-[500px] relative rounded-3xl overflow-hidden">
+      <img 
+        src="https://www.figma.com/api/mcp/asset/5b961d51-fa5c-44e1-a680-449c7d4d29ee" 
+        alt="Sales representative" 
+        class="absolute inset-0 w-full h-full object-cover rounded-3xl"
+      >
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="flex-1 bg-white flex flex-col gap-12 items-center justify-center p-20 overflow-hidden">
+      <!-- Header Text -->
+      <div class="flex flex-col gap-3 w-full">
+        <h1 class="font-extrabold text-[40px] leading-[1.2] text-gray-dark">
+          Talk with one of our rep sales
+        </h1>
+        <p class="text-[18px] text-gray-text">
+          Our team will help to find the best option for you.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form class="flex flex-col w-full">
+        <div class="flex flex-col gap-6 w-full">
+          <!-- Name Field -->
+          <div class="flex flex-col gap-3 w-full">
+            <label class="font-bold text-sm text-gray-label">
+              Seu nome
+            </label>
+            <input 
+              type="text" 
+              placeholder="Informe seu nome"
+              class="bg-gray-bg w-full px-3 py-4 rounded-xl text-sm text-gray-text placeholder:text-gray-text focus:outline-none focus:ring-2 focus:ring-primary-green"
+            >
+          </div>
+
+          <!-- Phone Field -->
+          <div class="flex flex-col gap-3 w-full">
+            <label class="font-bold text-sm text-gray-label">
+              Seu telefone
+            </label>
+            <input 
+              type="tel" 
+              placeholder="+55 (00) 9 0000-0000"
+              class="bg-gray-bg w-full px-3 py-4 rounded-xl text-sm text-gray-text placeholder:text-gray-text focus:outline-none focus:ring-2 focus:ring-primary-green"
+            >
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit"
+            class="bg-primary-green w-full h-12 flex items-center justify-center px-2.5 py-4 rounded-xl text-white font-bold text-base hover:bg-opacity-90 transition-colors cursor-pointer"
+          >
+            Contact us
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
