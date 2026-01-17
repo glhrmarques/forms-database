@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script src="https://unpkg.com/libphonenumber-js@1.10.51/bundle/libphonenumber-min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Taiff</title>
+  <title>Forms</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +62,7 @@
             <input 
               type="text" 
               placeholder="Informe seu nome"
-              class="bg-gray-bg w-full px-3 py-4 rounded-xl text-sm text-gray-text placeholder:text-gray-text focus:outline-none focus:ring-2 focus:ring-primary-green"
+              class="bg-gray-bg w-full px-3 py-4 rounded-xl text-[16px] text-gray-text placeholder:text-gray-text focus:outline-none focus:ring-2 focus:ring-primary-green"
             >
           </div>
 
@@ -70,10 +71,11 @@
             <label class="font-bold text-sm text-gray-label">
               Seu telefone
             </label>
-            <input 
+            <input
+              id="phone-input" 
               type="tel" 
               placeholder="+55 (00) 9 0000-0000"
-              class="bg-gray-bg w-full px-3 py-4 rounded-xl text-sm text-gray-text placeholder:text-gray-text focus:outline-none focus:ring-2 focus:ring-primary-green"
+              class="bg-gray-bg w-full px-3 py-4 rounded-xl text-[16px] text-gray-text placeholder:text-gray-text focus:outline-none focus:ring-2 focus:ring-primary-green"
             >
           </div>
 
@@ -88,5 +90,8 @@
       </form>
     </div>
   </div>
+
+  <script src="phoneFormating.js"></script>
+
 </body>
 </html>

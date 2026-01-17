@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "libphonenumber-js": "^1.12.34",
+    "postgres": "^3.4.8"
+  }
+}
