@@ -1,9 +1,9 @@
 {
   "type": "module",
   "dependencies": {
+    "@supabase/supabase-js": "^2.92.1-rc.2",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "libphonenumber-js": "^1.12.34",
-    "postgres": "^3.4.8"
+    "libphonenumber-js": "^1.12.34"
   }
 }
