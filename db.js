@@ -7,21 +7,23 @@ dotenv.config()
 const app = express()
 const PORT = 8080
 
+//Middleware 
+app.use(express.json()); // without it, the backend will recieve a raw string. 
+app.use(express.static('.')); // used to access html files, like localhost:8080/index.html
+
+
 const supabaseUrl = 'https://nxuehljrynbmwceqklxa.supabase.co'
 const supabaseKey = process.env.SUPABASE_KEY
-
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 
 app.post('/senddata', async (req,res) => {
-
-    const today = new Date();
+    const { name, cellphone } = req.body;
 
     const { data, error} = await supabase
     .from('people')
     .insert([
-        {id: 1234, name: 'Camila', current_date: today},
-        {id: 6789, name: 'Mario', current_date: today},
+        {name: name, cellphone: cellphone}
     ]);
 
     if (error) {
